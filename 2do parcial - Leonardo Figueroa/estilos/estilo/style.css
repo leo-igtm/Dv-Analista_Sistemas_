@@ -1,0 +1,100 @@
+@media (min-width:768px){
+
+    
+    .portada-video{
+        position: relative; 
+        overflow: hidden; 
+        padding: 20px;
+    }
+    .portada-video video {
+        display: block;
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        width:100%;
+        z-index: -1;/*el eje z en la ventana*/
+    
+    }
+
+
+    .menu{
+         /*esquema flexible*/
+        display: flex; /*ubica a los hijos directos en hilera*/
+        justify-content: space-between; /*alineacion en el eje principal de ese padre flexible*/
+
+        /*vamos a fijar la barra del menu al tope de la ventana*/
+        position: fixed;
+        left:0;
+        top:0;
+        right:0;
+
+        z-index: 99999;
+    }
+
+    nav ul a {
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+    .display-tablet-flex {
+        display: flex;
+    }
+
+
+
+    
+    .col-tablet-100{
+        width:100%;
+    }
+    .col-tablet-50{
+        width:50%;
+    }
+    .col-tablet-70{
+        width:70%;
+    }
+    .col-tablet-30{
+        width:30%;
+    }
+
+    .orden-tablet-primero{
+        order:-1;
+    }
+
+
+    
+    .margenes-verticales{
+        margin-top:20px;
+        margin-bottom: 20px;
+    }
+}
+
+
+@media (min-width:1024px){
+    /*
+    ancho minimo de 1024px en adelante
+    es el mininmo de escritorio como punto de quiebre
+    */
+
+   
+
+    .col-escritorio-100{
+        width:100%;
+    }
+    .col-escritorio-50{
+        width:50%;
+    }
+    .col-escritorio-30{
+        width:30%;
+    }
+    
+    .margenes-verticales{
+        margin-top:25px;
+        margin-bottom: 25px;
+    }
+
+    section {
+        padding: 100px 50px;
+    }
+    
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Fredericka+the+Great&family=GFS+Neohellenic:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Stylish&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/estilos/style.css">
+    <link rel="shortcut icon" href="/icon/logo.ico">
+
+</head>
+<body>
+    <nav class="menu">
+        <a href="/index.html"> <!--anclas de navegación, las usamos para crear enlaces-->
+            <img src="icon/logo.ico" alt="Alice in Chains" width="90" height="auto">
+        </a>
+        <ul class="display-tablet-flex"><!--usamos la lista desaordenada para agrupar-->
+            <!--desde este menu creamos #marcadolocal para señalar contenidos en el mismo documento-->
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="/secciones/Biografia.html">Biografia</a></li>
+            <li><a href="/secciones/Produccion.html">Produccion</a></li>
+            <li><a href="/secciones/Obras-destacadas.html"> Obras destacadas</a></li>
+            <li><a href="/secciones/blog-noticias.html"> Blog de noticias</a></li>
+            <li><a href="/secciones/contactos.html">Contactos</a></li>
+
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <!--formulario para el ingreso de datos de los usuarios-->
+            <form action="Contactos.html" method="POST" id="formulario">
+
+              <label><!--label es la indicación-->
+                  Nombre y Apellido:
+                  <!--input es el campo
+                  required el campo es obligatorio
+                  minlength y maxlenght validan la cantidad de caracteres ingresados
+                  placeholder sirve para poner un ejemplo del valor esperado
+                  -->
+                  <input class="campo" type="text" required minlength="5" maxlength="25"
+                      placeholder="Ana Lopez">
+              </label>
+
+              <label>
+                  Correo:
+                  <input class="campo" type="email" required placeholder="tu@correo.com">
+              </label>
+
+              <label for="consulta">Mensaje:</label>
+              <!--textarea le permite al usuario ingresar un comentario multilinea-->
+              <textarea class="campo" name="consulta" id="consulta" required rows="10" cols="8"
+                  placeholder="Tu Consulta..."></textarea>
+
+              <input type="checkbox" id="suscripcion">
+              <label for="suscripcion">Acepto recibir Novedades y Ofertas en mi correo</label>
+
+              <input type="submit" value="Enviar mi Consulta">
+
+          </form>
+      </section>
+    </main>
+    <footer>
+        
+        
+        <div class="contenedor">
+            <ul class="justificacion-espaciado-alrededor"><!--usamos la lista desaordenada para agrupar-->
+                <!--desde este menu creamos #marcadolocal para señalar contenidos en el mismo documento-->
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/secciones/Biografia.html">Biografia</a></li>
+                <li><a href="/secciones/Produccion.html">Produccion</a></li>
+                <li><a href="/secciones/Obras-destacadas.html"> Obras destacadas</a></li>
+                <li><a href="/secciones/blog-noticias.html"> Blog de noticias</a></li>
+                <li><a href="/secciones/contactos.html">Contactos</a></li>
+    
+            </ul>
+        <!--pie de página-->
+        <small>Creado por Leonardo Figueroa copiright &copy; 2024</small>
+        <p>Mail: <a href="mail:leonardo.figueroa408@gmail.com">leonardo.figueroa408@gmail.com</a></p>
+    </div>
+    </footer> 
+   
+</body>
+</html>

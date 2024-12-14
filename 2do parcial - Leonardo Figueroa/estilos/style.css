@@ -1,0 +1,358 @@
+html{
+    scroll-behavior: smooth;
+}
+
+/*selector universal*/
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    margin:0;
+}
+
+nav ul {
+
+    list-style-type: none;
+    padding-left: 0;
+}
+
+nav a {
+    text-transform: uppercase;
+    text-decoration: none; 
+}
+
+
+
+/*fuentes*/
+body{
+    font-family: "GFS Neohellenic", serif;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.6;
+}
+
+h1 {
+    font-family: "GFS Neohellenic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 45px;
+}
+h2,
+h3 {
+    font-family: "GFS Neohellenic", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/**/
+body {
+    background-color: black;
+    color: #94a1b2;
+}
+
+h1, h2, h3 {
+    color:#fffffe;
+}
+
+nav ul a {
+
+    display: inline-block;
+    padding: 8px 12px;
+    justify-content: space-evenly;
+    background-color:gray;
+    color:#fffffe;
+    border-radius: 5%;
+    
+
+}
+
+/**/
+nav ul a:hover {
+
+    background-color: none;
+   
+}
+nav ul a:hover span{
+
+    color: #140934;
+    
+}
+
+
+/*LAYOUT*/
+section {
+    padding: 50px 20px;
+}
+
+
+.menu {
+    padding: 10px;
+}
+
+
+/*tecnicas responsive*/
+.image-fluida {
+    max-width: 100%;
+    height: auto;
+    
+}
+
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    /*margin-right: none;
+    */
+    padding: 20%;
+}
+
+.fila {
+    display: inline-block;
+    flex-wrap: wrap;
+
+}
+/*selector de hijo directo*/
+.fila > div {
+    padding-left: 5%;
+    padding-right: 15px;
+}
+
+.col-movil-100{
+    width:100%;
+}
+.col-movil-50{
+    width:50%;
+}
+.col-movil-30{
+    width:30%;
+}
+
+.justificacion-centrada {
+    justify-content: center;
+}
+
+.justificacion-espaciado-alrededor {
+    justify-content: space-around;
+}
+
+
+
+.portada-video video {
+    display: none;
+}
+
+
+/*formulario de contacto*/
+#formulario {
+    /*
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    */
+    display: flex;
+    flex-direction: column;
+}
+.campo {
+    display: block;
+    width: 100%;
+    margin-bottom:20px;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 5px;
+
+    /*el valor inherit fuerta la herencia de un ancestro para esa propiedad*/
+    font-family: inherit;
+}
+label {
+  font-style: italic ;
+}
+
+/*selector de atributo*/
+input[type=submit]{
+    display: block;
+    padding: 8px;
+    font-size: 22px;
+    text-transform: uppercase;
+    background-color: black;
+    color:white;
+    border: 3px solid grey;
+    border-radius: 5px;
+    margin-top:20px;
+    margin-left: auto;
+}
+
+/*
+:hover
+:active
+:focus
+*/
+input[type=submit]:hover {
+    background-color: black;
+}
+input[type=submit]:active {
+    background-color: black;
+    border-color: black;
+}
+
+/*personalizar el checkbox*/
+input[type=checkbox]{
+    /*hack css offset, sacar un elemento de pantalla*/
+    position: absolute;
+    left:-99999px;
+}
+/*selector de hermono adyacente +*/
+/*necesitamos un pseudoelemento para recrear la caja
+::before
+::after
+*/
+input[type=checkbox] + label:before {
+    display: inline-block;
+    content:"";
+    width:20px;
+    height: 20px;
+    border: 3px solid #cfcadb;
+    border-radius: 5px;
+
+    /*vertical align sirve para alinear elementos inline-block*/
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+
+
+ 
+
+
+/*personalizar el checkbox*/
+input[type=checkbox]{
+    /*hack css offset, sacar un elemento de pantalla*/
+    position: absolute;
+    left:-99999px;
+}
+/*selector de hermono adyacente +*/
+/*necesitamos un pseudoelemento para recrear la caja
+::before
+::after
+*/
+input[type=checkbox] + label:before {
+    display: inline-block;
+    content:"";
+    width:20px;
+    height: 20px;
+    border: 3px solid #d6d3df;
+    border-radius: 5px;
+
+    /*vertical align sirve para alinear elementos inline-block*/
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+
+
+/*MEDIAS QUERIES*/
+@media (min-width:768px){
+
+    
+    .portada-video{
+        position: relative; 
+        overflow: hidden; 
+        padding: 20px;
+    }
+    .portada-video video {
+        display: block;
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        width:100%;
+        z-index: -1;/*el eje z en la ventana*/
+    
+    }
+
+
+    .menu{
+        color: white;
+         /*esquema flexible*/
+        display: flex; /*ubica a los hijos directos en hilera*/
+        justify-content: space-between; /*alineacion en el eje principal de ese padre flexible*/
+        text-decoration: none;
+        /*vamos a fijar la barra del menu al tope de la ventana*/
+        position: absolute;
+        left:0;
+        top:0;
+        right:0;
+        padding: 10px;
+        z-index: 99999;
+    }
+
+    nav ul a {
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+    .display-tablet-flex {
+        display: flex;
+    }
+
+
+
+    
+    .col-tablet-100{
+        width:100%;
+    }
+    .col-tablet-50{
+        width:50%;
+    }
+    .col-tablet-70{
+        width:70%;
+    }
+    .col-tablet-30{
+        width:30%;
+    }
+
+    .orden-tablet-primero{
+        order:-1;
+    }
+
+
+    
+    .margenes-verticales{
+        margin-top:20px;
+        margin-bottom: 20px;
+    }
+}
+
+
+@media (min-width:1024px){
+    /*
+    ancho minimo de 1024px en adelante
+    es el mininmo de escritorio como punto de quiebre
+    */
+
+   
+
+    .col-escritorio-100{
+        width:100%;
+    }
+    .col-escritorio-50{
+        width:50%;
+    }
+    .col-escritorio-30{
+        width:30%;
+    }
+    
+    .margenes-verticales{
+        margin-top:25px;
+        margin-bottom: 25px;
+    }
+
+    section {
+        padding: 100px 50px;
+    }
+    
+}
